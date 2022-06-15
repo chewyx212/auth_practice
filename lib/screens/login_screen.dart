@@ -1,6 +1,7 @@
 import 'package:auth_practice/style/font.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -17,6 +18,22 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _isObscure = true;
 
   final _formKey = GlobalKey<FormState>();
+
+  Future signIn() async {
+    if (_formKey.currentState!.validate()) {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: usernameController.text.trim(),
+        password: passwordController.text.trim(),
+      );
+    }
+  }
+
+  @override
+  void dispose() {
+    usernameController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -124,10 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                    }
-                  },
+                  onPressed: signIn,
                   child: Text(
                     'Sign In',
                     style: SFProDisplayRegular.copyWith(

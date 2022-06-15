@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "48740095686",
+    "project_id": "auth-practice-78688",
+    "storage_bucket": "auth-practice-78688.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48740095686:android:7704cdc8cb1fcef09329c7",
+        "android_client_info": {
+          "package_name": "com.example.auth_practice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48740095686-f8alu3me8o9onku40965kcp4fr0jqndq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFeC_aX_BOf8gjgE1NBfs7mYLB0fI0Sus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48740095686-f8alu3me8o9onku40965kcp4fr0jqndq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
